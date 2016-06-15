@@ -22,6 +22,7 @@ module.exports = {
 				return next();
 			}
 
+			mongoose.Promise = require('q').Promise;
 			mongoose.connect(uri, opts);
 
 			this.mongoose = mongoose;
