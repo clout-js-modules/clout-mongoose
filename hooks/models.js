@@ -22,7 +22,9 @@ module.exports = {
 				return next();
 			}
 
-			this.mongoose = mongoose.connect(uri, opts);
+			mongoose.connect(uri, opts);
+
+			this.mongoose = mongoose;
 
 			debug('mongoose initialized');
 			next();
